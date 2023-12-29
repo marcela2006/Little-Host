@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box ;
+        font-family: "Poppins", sans-serif;
+    } 
+    
+
+ .hero{
+    background-color: #fff;
+    overflow: hidden;
+ }
+
+ .heading h1{
+    color:#1ECBE1;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+ }
+
+ .heading2 h1{
+    color:#000000;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+ }
+
+ .container{
+    display: flex;
+    justify-content: center;
+    width:90%;
+    align-items: center;
+    margin:65px auto;
+} 
+    
+.hero-content{
+    flex:1;
+    width: 600px;
+    margin:0px 25px;
+    animation: fadeInUp 1s ease;
+    } 
+
+.hero-content h2{
+    font-size: 38px;
+    color:#333;
+    text-align: center;
+} 
+
+.hero-content p {
+    font-size: 24px;
+    Line-height: 1.5;
+    margin-bottom: 40px; 
+    color:black;
+    text-align: center;
+}
+
+
+.hero-image{
+    flex:1; 
+    width: 600px;
+    margin:auto;
+    animation: fadeInRigth 1s ease-out ;
+}
+
+.img-final{
+   /* flex:1; */ 
+    width: auto;
+    margin:auto;
+    margin-bottom: -5px;
+    animation: fadeInUp 1s ease;
+    
+}
+
+img{
+    width:100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px){
+    
+
+    .heading h1{
+    font-size: 45px;
+    margin-top: 30px;
+    } 
+    
+    .hero{
+    margin:0px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0px 20px; /* Ajuste a quantidade de padding conforme necessário */
+    }
+
+    .hero-content {
+    width: 100%;
+    margin: 35px 0px;
+    } 
+
+    .hero-content h2{
+    font-size: 30px;
+    } 
+
+    .hero-content p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .heading2 h1{
+        color:#000000;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 15px;
+     }
+
+     .img-final{
+        width: 90%;  
+    }
+
+}
+
+@keyframes fadeInUp {
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    } 
+    
+   
+}
+
+@keyframes fadeInRigth {
+
+    100%{
+        opacity: 2;
+        transform: translateX(0px);
+    }
+
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    } 
+    
+}
+
+@keyframes fadeInLeft {
+
+    100%{
+        opacity: 2;
+        transform: translateX(0px);
+    }
+
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    } 
+    
+}
+
+
+
+
+

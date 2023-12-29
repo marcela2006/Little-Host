@@ -1,0 +1,123 @@
+/* Reset de Estilos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #C2F1F7;
+    color: #333;
+  }
+  
+  h1{
+    text-align: center;
+    margin: 30px;
+    color: #1ECBE1;
+  }
+  
+  h2{
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    margin-left: 20px;
+  }
+  
+  nav a:hover {
+    color: #f4f4f4;
+    
+  }
+  
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius:  1.3rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 100%;
+    
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .edit-button,
+  .archive-button {
+    background-color: #3fb1f2;
+    padding: 7px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 18px;
+    margin-bottom: 3rem;
+    transition: 0.3s;
+  }
+  
+  .edit-button:hover,
+  .archive-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  
+  
+  
+    .user-table th,
+    .user-table td {
+      padding: 8px;
+      font-size: 14px;
+      display: block; /* Altera para layout vertical */
+      width: 100%; /* Ocupa a largura total da viewport */
+      box-sizing: border-box; /* Mantém o espaçamento interno dentro da largura total */
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    .user-table th {
+      font-weight: bold;
+    }
+  
+    .user-table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+  
+  }
+  

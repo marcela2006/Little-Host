@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #C2F1F7;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#fade .spinner-border {
+  width: 60px;
+  height: 60px;
+}
+
+.hide {
+  display: none !important;
+}
+
+#message {
+  width: 40%;
+}
+
+.alert.alert-light p {
+  border-bottom: 1px solid #333;
+  padding: 1.2em 0;
+}
+
+.container{
+    width: 430px;
+    height: 600px;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    border-radius: 3.3rem;
+    background: #FFF;
+    overflow: hidden;
+}
+
+.container h1{
+    position: absolute;
+    font-size: 40px;
+    top: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.container .indicator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 100px;
+}
+
+.indicator .step{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.step div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.step1 div{
+    border-color: #1ECBE1;
+    background: #1ECBE1;
+    color: #FFF;
+    transition: all 0.4s ease;
+}
+
+.step span{
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.step1 span{
+    color: #1ECBE1;
+}
+
+.indicator .line{
+    width: 30px;
+    height: 30px;
+    border-top: 4px solid black;
+    transition: all 0.4s ease;
+}
+
+.container .panel{
+    width: 1720px;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease;
+}
+
+.page1,.page2,.page3,.page4{
+    position: absolute;
+    height: 100%;
+    width: 430px;
+}
+
+.page1{
+    left: 0;
+}
+
+.page2{
+    left: 25%;
+}
+
+.page3{
+    left: 50%;
+}
+
+.page4{
+    left: 75%;
+}
+
+.form{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 97%;
+    height: 90%;
+    top: 90px;
+}
+
+.form .form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    height: 50px;
+    margin: 8px 0;
+}
+
+.form-group input{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid black;
+}
+
+.form-group label{
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: #fff;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 3px;
+    color: #999;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label{
+    color: black;
+    top: 0%;
+    transform: translateY(-50%) scale(0.85);
+}
+
+.form .btn-group{
+    background-color: #3fb1f2;
+  padding: 7px 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-size: 18px;
+  margin-bottom: 3rem;
+  transition: 0.3s;
+}
+
+.btn-group .btn{
+    background-color: #3fb1f2;
+  padding: 7px 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-size: 18px;
+  margin-bottom: 3rem;
+  transition: 0.3s;
+}
+
+.btn-group .btn-f{
+    width: 100%;
+}
+
+.btn-group .btn:active{
+    transform: scale(0.95);
+}
+
+.btn-group .btn:hover{
+    opacity: 0.8;
+}
+
+#one:checked ~ .container .panel{
+    left: -430px;
+}
+
+#two:checked ~ .container .panel{
+    left: -860px;
+}
+
+#three:checked ~ .container .panel{
+    left: -1290px;
+}
+
+#one,#two,#three{
+    display: none;
+}
+
+#one:checked ~ .container .indicator .line1,
+#two:checked ~ .container .indicator .line2,
+#three:checked ~ .container .indicator .line3{
+    border-color: #1ECBE1;
+}
+
+#one:checked ~ .container .indicator .step2 div,
+#two:checked ~ .container .indicator .step3 div,
+#three:checked ~ .container .indicator .step4 div{
+    border-color: #1ECBE1;
+    background: #1ECBE1;
+    color: #FFF;
+}
+
+#one:checked ~ .container .indicator .step2 span,
+#two:checked ~ .container .indicator .step3 span,
+#three:checked ~ .container .indicator .step4 span{
+    color: #1ECBE1;
+}

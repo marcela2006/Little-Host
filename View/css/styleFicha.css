@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  position: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content {
+  position: inherit;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 100%;
+  
+}
+
+  .inner-box {
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+#animal-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.animal-image {
+  text-align: center;
+    margin-top: 10%;
+  max-width: 170px;
+  width: 130px;
+  border: 5px solid #151426;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: backgroud .3s;
+}
+
+#animal-info {
+  text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
+    pointer-events: none;
+    transition: 0.4s;
+  }
+
+
+  .excluir-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF5733; /* Cor de fundo */
+    color: #FFF; /* Cor do texto */
+    text-decoration: none;
+    border: 1px solid #FF5733;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.excluir-link:hover {
+    background-color: #FF2D00; /* Cor de fundo quando passa o mouse */
+}
+
+  .btn-editar {
+    background-color: #0e86f7;
+    padding: 7px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 18px;
+    margin-bottom: 3rem;
+    transition: 0.3s;
+  }
+  
+  .btn-editar:hover {
+    background-color: #064296;
+  }
+
+  .btn-excluir {
+    background-color: #f23f3f;
+    padding: 7px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 18px;
+    margin-bottom: 3rem;
+    transition: 0.3s;
+  }
+  
+  .btn-excluir:hover {
+    background-color: #b90c0c;
+  }
+
+
+
+@media (max-width: 850px) {
+    .box {
+      height: auto;
+      max-width: 550px;
+      overflow: hidden;
+    }
+
+    .inner-box {
+        position: static;
+        transform: none;
+        width: revert;
+        height: revert;
+        padding: 2rem;
+      }
+}  
+
+@media (max-width: 530px) {
+    main {
+      padding: 1rem;
+    }
+  
+    .box {
+      border-radius: 2rem;
+    }
+
+    .inner-box {
+        padding: 1rem;
+      }
+}

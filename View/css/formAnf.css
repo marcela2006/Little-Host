@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+#message {
+  width: 40%;
+}
+
+.alert.alert-light p {
+  border-bottom: 1px solid #333;
+  padding: 1.2em 0;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    height: 700px;
+    background-color: #fff;
+    border-radius: 3.3rem;
+    border:.4rem solid #1ECBE1;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+  }
+
+.inner-box {
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+      
+
+.button{
+  text-align: center;
+}
+  
+.comic-button {
+  background-color: #3fb1f2;
+  padding: 7px 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-size: 18px;
+  margin-bottom: 3rem;
+  transition: 0.3s;
+}
+
+.comic-button:hover {
+  background-color: #1970E6;
+}
+
+
+
+
+@media (max-width: 850px) {
+  .box {
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+  }
+
+  .inner-box {
+    position: static;
+    transform: none;
+    width: revert;
+    height: revert;
+    padding: 2rem;
+  }
+
+  .forms-wrap {
+    position: revert;
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    max-width: revert;
+    padding: 1.5rem 2.5rem 2rem;
+    transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+  }
+
+}
+
+@media (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+
+  .box {
+    border-radius: 2rem;
+  }
+
+  .inner-box {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem 2rem 1.5rem;
+  }
+}

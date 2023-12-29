@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root{
+    --main-color:#1ECBE1;
+    --black:#3fb1f2;
+    --bg:#fff;
+    --border:.2rem solid #1ECBE1;
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 15px;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    height: 5rem;
+    width: 5rem;
+    background-color: #3fb1f2;
+    padding: 7px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+    background-color: #1970E6;
+}
+
+
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.5rem;
+}
+
+.products .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.products .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border:var(--border);
+    color:black;
+    margin:.3rem;
+}
+
+.products .box-container .box .icons a:hover{
+    background:var(--main-color);
+}
+
+.products .box-container .box .image{
+    padding: 1.5rem 0;
+}
+
+.products .box-container .box .image img{
+    height: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.products .box-container .box .content h3{
+    color:black;
+    font-size: 25px;
+}
+
+
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
